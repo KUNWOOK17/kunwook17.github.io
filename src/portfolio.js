@@ -90,7 +90,7 @@ https://fontawesome.com/icons?d=gallery */
     },
     {
       skillName: "C++",
-      fontAwesomeClassname: "fab fa-cuttlefish",
+      fontAwesomeClassname: "fab fa-cuttlefish"
     },
     // {
     //   skillName: "swift",
@@ -211,7 +211,7 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  showGithubProfile: "true" // Set true or false to show Contact profile using Github, defaults to true
   // display: true // Set false to hide this section, defaults to true
 };
 
@@ -224,7 +224,8 @@ const bigProjects = {
     {
       image: require("/home/kunwookpark/kunwook17/src/assets/images/m0609.png"),
       projectName: "Doosan Robotics Project 1",
-      projectDesc: "Implementation of a robot automation process system using ROS2",
+      projectDesc:
+        "Implementation of a robot automation process system using ROS2",
       footerLink: [
         {
           name: "View Details",
@@ -237,7 +238,8 @@ const bigProjects = {
     {
       image: require("/home/kunwookpark/kunwook17/src/assets/images/TurtleBot4_Header.png"),
       projectName: "Doosan Robotics Project 4",
-      projectDesc: "Development of an autonomous navigation robot system based on SLAM",
+      projectDesc:
+        "Development of an autonomous navigation robot system based on SLAM",
       footerLink: [
         {
           name: "Visit Website",
@@ -308,7 +310,7 @@ const achievementSection = {
         }
       ]
     }
-  ],
+  ]
   // display: true // Set false to hide this section, defaults to true
 };
 
@@ -332,7 +334,7 @@ const blogSection = {
       description:
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
-  ],
+  ]
   // display: true // Set false to hide this section, defaults to true
 };
 
@@ -351,7 +353,7 @@ const talkSection = {
       slides_url: "https://bit.ly/saadpasta-slides",
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
-  ],
+  ]
   // display: true // Set false to hide this section, defaults to true
 };
 
@@ -364,7 +366,7 @@ const podcastSection = {
   // Please Provide with Your Podcast embeded Link
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
+  ]
   // display: true // Set false to hide this section, defaults to true
 };
 
@@ -387,9 +389,9 @@ const contactInfo = {
 
 // Twitter Section
 
-const twitterDetails = {    
+const twitterDetails = {
   // 이게 마지막에 뜨던 그 돌아가는 로딩표시
-  userName: "twitter", //Replace "twitter" with your twitter username without @
+  userName: "twitter" //Replace "twitter" with your twitter username without @
   // display: true // Set true to display this section, defaults to false
 };
 

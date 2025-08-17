@@ -75,8 +75,6 @@
 
 // export default Main;
 
-
-
 // src/containers/Main.js
 import React, {useEffect, useState} from "react";
 import Header from "../components/header/Header";
@@ -124,7 +122,7 @@ const Main = () => {
 
     // 2. popstate 이벤트 리스너를 추가
     window.addEventListener("popstate", handlePopState);
-    
+
     // 3. 현재 URL에 따라 페이지 상태를 초기화
     const initialPath = window.location.pathname.replace("/", "");
     if (initialPath === "project1" || initialPath === "project4") {
@@ -156,9 +154,13 @@ const Main = () => {
     setIsDark(!isDark);
   };
 
-  const changePage = (pageName) => {
+  const changePage = pageName => {
     setCurrentPage(pageName);
-    window.history.pushState(null, "", pageName === "main" ? "/" : `/${pageName}`);
+    window.history.pushState(
+      null,
+      "",
+      pageName === "main" ? "/" : `/${pageName}`
+    );
   };
 
   return (

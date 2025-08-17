@@ -20,7 +20,6 @@
 // //   );
 // // }
 
-
 // // src/pages/Project1.js
 // import React from "react";
 // import ReactMarkdown from "react-markdown";
@@ -51,9 +50,9 @@
 //   );
 // }
 
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import DOMPurify from "dompurify";
-import { marked } from "marked";
+import {marked} from "marked";
 import TurtlebotMd from "./turtlebot.md"; // turtlebot.md 파일을 import
 
 export default function Project4() {
@@ -62,29 +61,31 @@ export default function Project4() {
   useEffect(() => {
     // import한 변수 TurtlebotMd를 fetch 함수의 경로로 사용
     fetch(TurtlebotMd)
-      .then((r) => {
+      .then(r => {
         if (!r.ok) throw new Error("md load fail");
         return r.text();
       })
-      .then((md) => {
-        const html = marked.parse(md, { mangle: false, headerIds: true });
+      .then(md => {
+        const html = marked.parse(md, {mangle: false, headerIds: true});
         setContent(DOMPurify.sanitize(html));
       })
-      .catch((e) => {
+      .catch(e => {
         setContent("Failed to load content.");
         console.error(e);
       });
   }, []);
 
   return (
-    <div style={{ maxWidth: "980px", margin: "40px auto", padding: "0 16px", lineHeight: 1.6 }}>
+    <div
+      style={{
+        maxWidth: "980px",
+        margin: "40px auto",
+        padding: "0 16px",
+        lineHeight: 1.6
+      }}
+    >
       <h1>TurtleBot Project</h1>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div dangerouslySetInnerHTML={{__html: content}} />
     </div>
   );
 }
-
-
-
-
-

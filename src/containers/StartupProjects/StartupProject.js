@@ -93,8 +93,6 @@
 //   );
 // }
 
-
-
 // // src/containers/StartupProjects/StartupProject.js
 
 // import React, {useContext} from "react";
@@ -183,9 +181,6 @@
 //   );
 // }
 
-
-
-
 // src/containers/StartupProjects/StartupProject.js
 
 import React, {useContext} from "react";
@@ -217,7 +212,9 @@ export default function StartupProject({changePage}) {
           <div className="projects-container">
             {bigProjects.projects.map((project, i) => {
               // project.projectName 값을 사용하여 어떤 페이지로 이동할지 결정합니다.
-              const pageName = project.projectName.includes("Project 1") ? "project1" : "project4";
+              const pageName = project.projectName.includes("Project 1")
+                ? "project1"
+                : "project4";
 
               return (
                 <div
@@ -253,7 +250,9 @@ export default function StartupProject({changePage}) {
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         <span
-                          className={isDark ? "dark-mode project-tag" : "project-tag"}
+                          className={
+                            isDark ? "dark-mode project-tag" : "project-tag"
+                          }
                           onClick={() => changePage(pageName)} // 위에서 결정한 페이지로 이동
                         >
                           Visit Website
